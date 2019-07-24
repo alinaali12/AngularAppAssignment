@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>  
+    <div></div>
+    <div></div>
+    <!-- <div>
+        <input  type="text" name="search" text="Search" [(ngModel)]="filter">
+    </div> -->
+    <div class="col-md-10 col-md-offset-1" class="table-responsive">
+    <table class="table table-striped table-bordered table-hover " >
+        <thead >
+        <tr>
+            <td class="th-sm" (click)="sort('id')">
+                ID<i class="fa fa-fw fa-sort">
+                    <span class="glyphicon sort-icon" *ngIf="key=='id'" [ngClass]="{'glyphicon-chevron-down':!reverse}"></span>
+                </i></td>
+            
+            <td class="th-sm" (click)="sort('name')">
+                NAME<i class="fa fa-fw fa-sort" *ngIf="key=='name'" [ngClass]="{'fa fa-fw fa-sort':!reverse}">
+                    </i>
+            </td>
+
+            <td class="th-sm" (click)="sort('email_address')">
+                EMAIL ADDRESS
+                        <span  class="glyphicon sort-icon" *ngIf="key=='email_address'" [ngClass]="{'glyphicon-chevron-down':!reverse}">
+                            <i class="fa fa-fw fa-sort"></i>
+                        </span>
+                    </td>
+
+            <td class="th-sm" (click)="sort('phone_number')">
+                <span class="glyphicon sort-icon" *ngIf="key=='phone_number'" [ngClass]="{'glyphicon-chevron-down':!reverse}"> 
+                </span>
+                PHONE NUMBER</td>
+
+            <td class="th-sm" (click)="sort('job_type')">
+                <span class="glyphicon sort-icon" *ngIf="key=='job_type'" [ngClass]="{'glyphicon-chevron-down':!reverse}"> 
+                </span>JOB TYPE</td>
+          </tr>
+          </thead>
+          <tr *ngFor="let user of allUsers |slice: (page-1)*pageSize:(page-1)*pageSize+pageSize | orderBy:key:reverse |filter:filter| paginate: { id: 'userPage',
+          itemsPerPage: pageSize,
+          currentPage: page,
+          totalItems: 24 }">
+              <td class="th-sm">{{user.id}}</td>
+              <td class="th-sm">{{user.name}}</td>
+              <td class="th-sm">{{user.email_address}}</td>
+              <td class="th-sm">{{user.phone_number}}</td>
+              <td class="th-sm">{{user.job_type}}</td>
+          </tr>
+    </table>
+</div>
+<pagination-controls  id="userPage"
+                      (pageChange)="pageChanged($event)"
+                      maxSize="24"
+                      directionLinks="true"
+                      autoHide="false"
+                      responsive="true"
+                      previousLabel="Previous"
+                      nextLabel="Next"
+                      screenReaderPaginationLabel="Pagination"
+                      screenReaderPageLabel="page"
+                      screenReaderCurrentLabel="You're on page">
+</pagination-controls>
+
+    
+</body>

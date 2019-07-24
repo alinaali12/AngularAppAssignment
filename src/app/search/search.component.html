@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="body-class">
+    <div></div>
+    <div></div>
+    <input type="text" [(ngModel)]="usrId" />
+    <button class="btn btn-primary" rounded="true" (click)=fun()>Search</button>
+    <div></div>
+<div class="col-md-10 col-md-offset-1" class="table-responsive">
+<table class="table table-bordered ">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>EMAIL ADDRESS</td>
+            <td>PHONE NUMBER</td>
+            <td>JOB TYPE</td>
+          </tr>
+    </thead>
+          <tr>
+              <td>{{ allUserss.id}}</td>
+              <td>{{ allUserss.name}}</td>
+              <td>{{ allUserss.email_address}}</td>
+              <td>{{ allUserss.phone_number}}</td>
+              <td>{{ allUserss.job_type}}</td>
+          </tr>
+</table>
+</div>
+</body>

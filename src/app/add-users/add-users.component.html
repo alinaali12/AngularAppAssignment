@@ -1,0 +1,68 @@
+
+<div class="container-fluid ">
+  <div class="row" height="20%">
+    <div class="col-4">
+        <img src='./assets/leaf.jpg' >
+    </div>
+    <div class="col-8 offset-s2" style="background-color:beige" >
+        <div class="row">
+            
+        <div class="col-2">
+              
+        </div>
+        
+        <div class="col-8">
+        <div class="card card-block bg-dark text-white">
+                <div class="card-header">
+                    <!-- <div class="btn-group btn-group-justified align-items-center">
+                            <a align=" center" href="#" class="btn" >Sign In</a>
+                            <a align="center" href="#" class="btn">Sign Up</a>
+                    </div> -->
+                    <p align="center" style="color:burlywood;font-size:30px;font-weight:bold">
+                      Add User Form
+                    </p>
+                </div>
+                <form ngNativeValidate #userForm="ngForm"  (ngSubmit)="onSubmit(f)" >
+                        <div class="row">
+                            <div clas="col-4">
+                            </div>
+                            <div class="col-6">
+                                <input name="name" required ngModel #name="ngModel" type="text" placeholder="Name" >
+                                <!-- <p class="help-block" *ngIf="name.invalid">Name is required</p> -->
+
+                                <input name="email_address" required ngModel #email="ngModel" type="email" placeholder="Email" >
+                                <!-- <p class="help-block" *ngIf="email.invalid">Email is not in the right format</p> -->
+
+                                <input name="password" required ngModel #password="ngModel" type="password" placeholder="Password">
+                                <!--<input name="confirmPass" required ngModel #confirmPass="ngModel" type="password" placeholder="Confirm Password">
+                                 <div *ngIf="userForm.submitted && confirmPassword.invalid" class="invalid-feedback">
+                                    <div *ngIf="confirmPass.errors.matchValueError">Confirm Password & Password must be same.</div>
+                                </div> -->
+                                
+                                <input name="phone_number" required type="text" ngModel #phone_number="ngModel" placeholder="Phone Number">
+                                <!--<input formControlName="phoneNumber" class="form-control" type="text" placeholder="Phone Number">
+                                
+                                 
+                                <input formControlName="job_type" class="form-control" type="text" placeholder="Job Type"> -->
+                            </div>
+                        </div>
+                        <button class="btn btn-group-justified align-items-center" >Submit</button>
+                        <!-- <div class="btn-group btn-group-justified align-items-center">
+                                <a align="center" href="#" class="btn" type="submit" onclick="register" >Submit</a>
+                        </div> -->
+                    </form>  
+        </div>
+        </div>
+        <div class="col-2">
+          <!-- <span style="color:red"; *ngIf="!addUsers.controls['name'].valid&&addUsers.controls['name'].dirty">
+            <span *ngIf="addUsers.controls.name.errors.required">User Name is required</span>
+            <span *ngIf="addUsers.controls.name.errors.minlenght">User Name should be of mininmum 3 characters</span>
+            <span *ngIf="addUsers.controls.name.errors.maxlenght">User Name should be of maximum 50 characters</span>
+          </span> -->
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<h1>{{test}}</h1>

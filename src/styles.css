@@ -1,1 +1,139 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-content: center;
+  }
+
+  /*this changes color of alternate rows and a row beige 
+   div:nth-child(even){
+    background-color: wheat;
+  } */
+
+  .card card-header
+  {
+    align-items: center;
+  }
+  .card .btn{
+    background-color:wheat;
+    margin:30px 200px;
+  }
+  /* card card-header{
+    background-color:red; 
+  } */
+  form label{
+    padding-right: 30px;
+    padding-left: 10px;
+  }
+  /* div:nth-child(even) {
+    background-color: beige
+  } */
+/* 
+  card form{
+    align-self: center;
+  } */
+
+  input, select, textarea{
+    color: cornsilk;
+}
+
+
+  .card{
+    align-content: center;
+  }
+  input{
+    align-content:center !important;
+    background: rgba(0, 0, 0, 0);  /*Black background with 0.5 opacity  */
+    /* background-color:rgba(0,0,0,0) !important; */
+    padding:10px;
+    margin: 8px 100px !important;
+    width: 300px; 
+    
+    border-bottom-color: #111;
+  }
+  
+/*   
+  transparent-input{
+    background-color:rgba(0,0,0,0) !important;
+    border:none !important;
+ } */
+
+ div.card-header
+ {
+   margin:8px;
+   padding: 2rem;
+ }
+ 
+  row card
+  {
+    margin:0 auto;
+    float:none;
+    background-color: #4CAF50;
+  }
+  
+  thead{
+    padding-top: 10px;
+    min-height: 50px;
+    background-color:rgb(156, 154, 154);
+    text-emphasis-color:white;
+  }
+
+  tr{
+    padding: 10px;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2
+  }
+  
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-content: center;
+  }
+  
+  #outer {
+    width: 100%;
+    text-align: center;
+  }
+
+  li {
+    float: left;
+    padding-top:10px;
+  }
+
+  div{
+    padding: 5px;
+    text-align: justify;
+  }
+  
+  li a {
+    text-align: center;
+    display: block;
+    color: white;
+    align-self: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: rgb(189, 210, 211);
+  }
+  
+  .active {
+    background-color: burlywood;
+  }
+
+  .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
