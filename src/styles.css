@@ -2,6 +2,21 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 30px;
+} 
+
+.bold{
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
 
 ul {
     list-style-type: none;

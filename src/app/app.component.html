@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav appCustomDir="customDir"  class="navbar navbar-expand-sm bg-dark navbar-dark">
     <a class="navbar-brand" routerLink="./index" routerLinkActive="active">
       <img src="assets/ang.jfif" style="width:90px;">
     </a>
@@ -16,8 +16,11 @@
       <li >
         <a routerLink="./add-users" routerLinkActive="active">Add User</a>
       </li>
+      <li >
+          <a routerLink="./login" routerLinkActive="active">Login</a>
+      </li>
     </ul>
   </nav>
 <!--   
 <app-user></app-user>   -->
-<router-outlet></router-outlet>
+<router-outlet  ></router-outlet>

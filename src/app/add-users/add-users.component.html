@@ -1,5 +1,5 @@
 
-<div class="container-fluid ">
+<div appCustomDir="customDir" class="container-fluid ">
   <div class="row" height="20%">
     <div class="col-4">
         <img src='./assets/leaf.jpg' >
@@ -22,7 +22,7 @@
                       Add User Form
                     </p>
                 </div>
-                <form ngNativeValidate #userForm="ngForm"  (ngSubmit)="onSubmit(f)" >
+                <form ngNativeValidate #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" >
                         <div class="row">
                             <div clas="col-4">
                             </div>

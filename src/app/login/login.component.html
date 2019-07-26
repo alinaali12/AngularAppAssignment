@@ -1,0 +1,51 @@
+
+<div appCustomDir="customDir" class="container-fluid ">
+        <div class="row" height="20%">
+          <div class="col-4">
+              <img src='./assets/leaf.jpg' >
+          </div>
+          <div class="col-8 offset-s2" style="background-color:beige" >
+              <div class="row">
+                  
+              <div class="col-2">
+                    
+              </div>
+              
+              <div class="col-8">
+              <div class="card card-block bg-dark text-white">
+                      <div class="card-header">
+                          <!-- <div class="btn-group btn-group-justified align-items-center">
+                                  <a align=" center" href="#" class="btn" >Sign In</a>
+                                  <a align="center" href="#" class="btn">Sign Up</a>
+                          </div> -->
+                          <p align="center" style="color:burlywood;font-size:30px;font-weight:bold">
+                            Login Form
+                          </p>
+                      </div>
+                      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" >
+                              <div class="row">
+                                  <div clas="col-4">
+                                  </div>
+                                  <div class="col-6">
+                                      <input name="email_address" required ngModel #email="ngModel" type="email" placeholder="Email" >
+                                      
+                                      <input name="password" required ngModel #password="ngModel" type="password" placeholder="Password">
+                                      
+                                  </div>
+                              </div>
+                              <button class="btn btn-group-justified align-items-center" >Login</button>
+                              <!-- <div class="btn-group btn-group-justified align-items-center">
+                                      <a align="center" href="#" class="btn" type="submit" onclick="register" >Submit</a>
+                              </div> -->
+                          </form>  
+              </div>
+              </div>
+              <div class="col-2">
+               
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+      

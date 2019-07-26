@@ -10,18 +10,18 @@ import {DataService} from '../data.service';
 export class SearchComponent implements OnInit 
 {
   dataSaved=false;
-  allUserss:User;
+  SelectedUsers:User;
   public usrId:number;
   constructor(private _dataService:DataService) { }
   ngOnInit() 
   {
-    
   }
-  fun()
+  fun(user:User)
   {
     this._dataService.getUserById(this.usrId).subscribe(data=> {
-      this.allUserss=data;
-      console.log('user',this.allUserss=data)});
+    this.SelectedUsers=data,this.fun(this.SelectedUsers)});
+    this.SelectedUsers=user;
+    console.log("search user",user);
   }
 
 }

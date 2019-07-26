@@ -43,9 +43,10 @@ export class AddUsersComponent implements OnInit {
   }
 
   onSubmit(f: NgForm) {
-    
+    console.log("Hi");
     this.user=f.value;
     
+    console.log("Hii");
     console.log(this.user.name);
     
     this._dataService.postUser(this.user).subscribe(

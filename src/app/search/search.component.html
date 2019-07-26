@@ -4,14 +4,14 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class="body-class">
+<body  class="body-class">
+    <div appCustomDir="customDir"></div>
     <div></div>
-    <div></div>
-    <input type="text" [(ngModel)]="usrId" />
-    <button class="btn btn-primary" rounded="true" (click)=fun()>Search</button>
+    <input type="text" name="enteredItem" style="color: black" [(ngModel)]="usrId"/>
+    <button class="btn btn-primary" style="background-color: burlywood" rounded="true" (click)=fun()>Search</button>
     <div></div>
 <div class="col-md-10 col-md-offset-1" class="table-responsive">
-<table class="table table-bordered ">
+<table class="table table-bordered">
     <thead>
         <tr>
             <td>ID</td>
@@ -21,12 +21,12 @@
             <td>JOB TYPE</td>
           </tr>
     </thead>
-          <tr>
-              <td>{{ allUserss.id}}</td>
-              <td>{{ allUserss.name}}</td>
-              <td>{{ allUserss.email_address}}</td>
-              <td>{{ allUserss.phone_number}}</td>
-              <td>{{ allUserss.job_type}}</td>
+          <tr *ngIf="usrId">
+              <td>{{ SelectedUsers.id}}</td>
+              <td>{{ SelectedUsers.name}}</td>
+              <td>{{ SelectedUsers.email_address}}</td>
+              <td>{{ SelectedUsers.phone_number}}</td>
+              <td>{{ SelectedUsers.job_type}}</td>
           </tr>
 </table>
 </div>
